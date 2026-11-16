@@ -1,0 +1,11 @@
+[Unit]
+Description=Run weekly Proxmox VM backup collection
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+AccuracySec=1min
+Unit=weekly-proxmox-backup.service
+
+[Install]
+WantedBy=timers.target

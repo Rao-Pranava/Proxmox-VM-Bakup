@@ -1,0 +1,8 @@
+# Install as /etc/proxmox-backup.conf on each Proxmox node (root:root, mode 600).
+# Edit these values for your system. Notifications are disabled by default.
+BACKUP_ROOT=/srv/proxmox-backups
+SHUTDOWN_TIMEOUT=900
+RETENTION_COUNT=4
+NTFY_URL=''
+NTFY_TOPIC=''
+NTFY_ENABLED=0

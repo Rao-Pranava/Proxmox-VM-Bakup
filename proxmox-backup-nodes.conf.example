@@ -1,0 +1,16 @@
+# Install as /etc/proxmox-backup-nodes.conf on the coordinator node.
+# Replace every example hostname, script path, mount, and folder with values
+# that match your environment. Use SSH aliases or user@host targets.
+NODES=(
+  'node-a|LOCAL|/usr/local/sbin/export_all_vms.sh|node-a'
+  'node-b|root@node-b.example|/usr/local/sbin/export_all_vms.sh|node-b'
+)
+
+STORAGE_TARGET='root@backup-storage.example'
+NODE_ROOT='/srv/proxmox-backups'
+BACKUP_MOUNT='/srv'
+REPLICATION_SCRIPT='/usr/local/sbin/replicate-backup.sh'
+COLLECTED_RETENTION=4
+NTFY_URL=''
+NTFY_TOPIC=''
+NTFY_ENABLED=0

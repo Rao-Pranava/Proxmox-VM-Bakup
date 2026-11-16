@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly Proxmox VM backup collection
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=/etc/proxmox-backup-nodes.conf
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/collect_proxmox_backups.sh
+TimeoutStartSec=infinity
